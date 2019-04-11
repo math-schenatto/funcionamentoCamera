@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:gravity="center"
+android:layout_weight="0"
+android:orientation="vertical">
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/GridLayout1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:columnCount="3"
+    android:orientation="horizontal"
+    android:rowCount="8"
+    android:useDefaultMargins="true"
+    tools:context=".MainActivity">
+    <!--Aqui vai a imagem -->
+
+    <com.github.chrisbanes.photoview.PhotoView
+        android:id="@+id/pv_image"
+        android:layout_width="324dp"
+        android:layout_height="439dp"
+        android:layout_rowSpan="7"
+        android:layout_columnSpan="3"
+        android:layout_gravity="fill_horizontal"
+        android:background="@color/colorPrimary"
+        android:scaleType="centerInside" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="3">
+        <!-- Botao -->
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="buscar"
+            android:text="Carregar Imagem" />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="tirarFoto"
+            android:text="Tira foto" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="buscar"
+            android:text="Compartilha Imagem" />
+
+
+    </LinearLayout>
+</GridLayout>
+
+</LinearLayout>
